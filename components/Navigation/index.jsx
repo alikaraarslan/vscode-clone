@@ -92,6 +92,11 @@ const Container = styled.div`
         border-left: 2px solid transparent;
         transition: 200ms;
         cursor: pointer;
+        &:hover {
+          img {
+            opacity: 0.8;
+          }
+        }
         img {
           width: 24px;
           opacity: 0.4;
