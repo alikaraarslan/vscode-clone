@@ -105,8 +105,13 @@ const Container = styled.div`
       &:hover {
         background: #505050;
       }
-      &.close:hover {
-        background: red;
+      &.close {
+        img {
+          width: 14px;
+        }
+        &:hover {
+          background: red;
+        }
       }
       img {
         width: 10px;

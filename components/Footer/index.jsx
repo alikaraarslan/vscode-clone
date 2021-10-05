@@ -1,92 +1,80 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Footer = () => {
-  return <Container>
-    <ul className="bottom-lists">
-      <li>
-        <button className="with-text">
-          <img src="/icons/git.svg"/>
-          master
-        </button>
-      </li>
-      <li>
-        <button>
-          <img src="/icons/sync.svg"/>
-        </button>
-      </li>
-      <li>
-        <button className="with-text">
-          <span>
-            <img src="/icons/x-mark.svg"/>
-            0
-          </span>
-          <span>
-            <img src="/icons/danger.svg"/>
-            0
-          </span>
-        </button>
-      </li>
-      <li>
-        <button>
-          <img src="/icons/share.svg"/>
-        </button>
-      </li>
-      <li>
-        <button>
-          Git Graph
-        </button>
-      </li>
-    </ul>
-    <ul className="bottom-lists">
-      <li>
-      <button>
-        Ln 22, Col 10
-        </button>
-      </li>
-      <li>
-        <button>
-          Spaces: 2
-        </button>
-      </li>
-      <li>
-        <button>
-          UTF-8
-        </button>
-      </li>
-      <li>
-        <button>
-          LF
-        </button>
-      </li>
-      <li>
-        <button>
-          Babel Javascript
-        </button>
-      </li>
-      <li>
-        <button className="with-text">
-          <img src="/icons/radio.svg"/>
-          Go Live
-        </button>
-      </li>
-      <li>
-        <button className="with-text">
-          <img src="/icons/double-tick.svg"/>
-          Prettier
-        </button>
-      </li>
-      <li>
-        <button>
-        <img src="/icons/people-carry-solid.svg"/>
-        </button>
-      </li>
-      <li>
-        <button>
-          <img src="/icons/bell.svg"/>
-        </button>
-      </li>
-    </ul>
-  </Container>
+  return (
+    <Container>
+      <ul className="bottom-lists">
+        <li>
+          <button className="with-text">
+            <img src="/icons/git-merge.svg" />
+            master
+          </button>
+        </li>
+        <li>
+          <button>
+            <img src="/icons/sync.svg" />
+          </button>
+        </li>
+        <li>
+          <button className="with-text">
+            <span>
+              <img src="/icons/error.svg" />0
+            </span>
+            <span>
+              <img src="/icons/warning.svg" />0
+            </span>
+          </button>
+        </li>
+        <li>
+          <button>
+            <img src="/icons/share.svg" />
+          </button>
+        </li>
+        <li>
+          <button>Git Graph</button>
+        </li>
+      </ul>
+      <ul className="bottom-lists">
+        <li>
+          <button>Ln 22, Col 10</button>
+        </li>
+        <li>
+          <button>Spaces: 2</button>
+        </li>
+        <li>
+          <button>UTF-8</button>
+        </li>
+        <li>
+          <button>LF</button>
+        </li>
+        <li>
+          <button>Babel Javascript</button>
+        </li>
+        <li>
+          <button className="with-text">
+            <img src="/icons/radio-tower.svg" />
+            Go Live
+          </button>
+        </li>
+        <li>
+          <button className="with-text">
+            <img src="/icons/double-tick.svg" />
+            Prettier
+          </button>
+        </li>
+        <li>
+          <button>
+            <img src="/icons/feedback.svg" />
+          </button>
+        </li>
+        <li>
+          <button>
+            <img src="/icons/bell-dot.svg" />
+          </button>
+        </li>
+      </ul>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -98,7 +86,7 @@ const Container = styled.div`
   padding: 0 7px;
   ul {
     display: flex;
-    li{
+    li {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -109,8 +97,8 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         display: flex;
-        margin:0 3px;
-        padding:0 5px;
+        margin: 0 3px;
+        padding: 0 5px;
         cursor: pointer;
         span {
           display: flex;
@@ -138,6 +126,6 @@ const Container = styled.div`
       }
     }
   }
-`
+`;
 
 export default Footer;
