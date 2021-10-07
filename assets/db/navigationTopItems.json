@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+		"key": "Explorer",
+    "icon": "files",
+    "label": "Explorer"
+  },
+  {
+    "id": 2,
+    "key": "Search",
+    "icon": "search",
+    "label": "Search"
+  },
+  {
+    "id": 3,
+    "key": "SourceControl",
+    "icon": "git-merge",
+    "label": "Source Control"
+  },
+  {
+    "id": 4,
+    "key": "Extensions",
+    "icon": "extensions",
+    "label": "Extensions"
+  },
+  {
+    "id": 5,
+    "key": "RunAndDebug",
+    "icon": "debug-alt",
+    "label": "Run and Debug"
+  }
+]

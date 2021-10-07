@@ -40,7 +40,9 @@ const Content = () => {
   );
 };
 const Container = styled.div`
-  height: calc(100vh - 52px);
+  flex: 1;
+  background: #1e1e1e;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
