@@ -48,7 +48,7 @@ const Navigation = () => {
         {NavigationTopItems.map((m) => (
           <li key={m.id}>
             <button
-              className={activeVSContent === m.id ? 'active' : null}
+              className={activeVSContent === m.id ? 'active items' : null}
               onClick={() => setActiveVSContent(m.id)}
             >
               <img src={`/icons/${m.icon}.svg`} title={m.label} />
@@ -102,7 +102,7 @@ const Container = styled.div`
           opacity: 0.4;
           transition: 200ms;
         }
-        &.active {
+        &.active.items {
           border-color: white;
           img {
             opacity: 1;
