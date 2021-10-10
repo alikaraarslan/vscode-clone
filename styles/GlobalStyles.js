@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
- 
+
 const GlobalStyle = createGlobalStyle`
   * {
 		margin: 0;
@@ -27,6 +27,14 @@ const GlobalStyle = createGlobalStyle`
 		background: none;
 		border: none;
 	}
+	
+  .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 `;
- 
+
 export default GlobalStyle;
