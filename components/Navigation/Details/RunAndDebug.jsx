@@ -5,7 +5,7 @@ const RunAndDebug = () => {
       <div className="actions">
         <ul>
           <li>
-            <button>
+            <button title="Views and More Actions...">
               <img src="/icons/ellipsis.svg" />
             </button>
           </li>

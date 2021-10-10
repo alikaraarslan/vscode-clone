@@ -5,22 +5,22 @@ const Extensions = () => {
       <div className="actions">
         <ul>
           <li>
-            <button>
+            <button title="Filter Extensions...">
               <img src="/icons/filter.svg" />
             </button>
           </li>
           <li>
-            <button>
+            <button title="Refresh">
               <img src="/icons/refresh.svg" />
             </button>
           </li>
           <li>
-            <button>
+            <button title="Clear Extensions Search Results">
               <img src="/icons/clear-all.svg" />
             </button>
           </li>
           <li>
-            <button>
+            <button title="Views and More Actions...">
               <img src="/icons/ellipsis.svg" />
             </button>
           </li>

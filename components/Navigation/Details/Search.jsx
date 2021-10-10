@@ -5,22 +5,22 @@ const Search = () => {
       <div className="actions">
         <ul>
           <li>
-            <button>
+            <button title="Refresh">
               <img src="/icons/refresh.svg" />
             </button>
           </li>
           <li>
-            <button>
+            <button title="Clear Search Results">
               <img src="/icons/clear-all.svg" />
             </button>
           </li>
           <li>
-            <button>
+            <button title="Open New Search Editor">
               <img src="/icons/go-to-file.svg" />
             </button>
           </li>
           <li>
-            <button>
+            <button title="Collapse All">
               <img src="/icons/collapse-all.svg" />
             </button>
           </li>
