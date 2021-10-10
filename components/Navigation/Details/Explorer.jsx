@@ -1,10 +1,29 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
+const explorerSubContents = [
+  {
+    id: 1,
+    key: 'Editor',
+    title: 'OPEN EDITORS',
+    desc: 'File list will be added',
+  },
+  {
+    id: 2,
+    key: 'Outline',
+    title: 'OUTLINE',
+    desc: 'The active editor cannot provide outline information.',
+  },
+  {
+    id: 3,
+    key: 'Timeline',
+    title: 'TIMELINE',
+    desc: 'The active editor cannot provide timeline information.',
+  },
+];
+
 const Explorer = () => {
-  const [collapseBoxEditor, setCollapseBoxEditor] = useState(false);
-  const [collapseBoxOutline, setCollapseBoxOutline] = useState(false);
-  const [collapseBoxTimeline, setCollapseBoxTimeline] = useState(false);
+  const [activeContent, setactiveContent] = useState('');
 
   return (
     <>
@@ -23,94 +42,35 @@ const Explorer = () => {
       <div className="folder-main-item">
         <AccordionContainer className="tabs">
           <ul>
-            <li
-              className={`explorer-${collapseBoxEditor ? 'active-' : ''}item`}
-            >
-              <input
-                className="checkbox"
-                type="checkbox"
-                id="chck1"
-                checked={collapseBoxEditor}
-                readOnly
-                disabled
-              />
-              <div
-                className={`card-title noselect ${
-                  collapseBoxEditor ? 'enable-sub' : 'disable-sub'
-                }`}
-                role="button"
-                tabIndex={0}
-                onClick={() => {
-                  setCollapseBoxEditor(!collapseBoxEditor);
-                  setCollapseBoxTimeline(false);
-                  setCollapseBoxOutline(false);
-                }}
+            {explorerSubContents.map((m) => (
+              <li
+                className={`explorer-${
+                  m.key === activeContent ? 'active-' : ''
+                }item`}
               >
-                <img src="/icons/chevron-right.svg" />
-                OPEN EDITORS
-              </div>
-              <div className="tab-content">Add Folder List</div>
-            </li>
-            <li
-              className={`explorer-${collapseBoxOutline ? 'active-' : ''}item`}
-            >
-              <input
-                className="checkbox"
-                type="checkbox"
-                id="chck1"
-                checked={collapseBoxOutline}
-                readOnly
-                disabled
-              />
-              <div
-                className={`card-title noselect ${
-                  collapseBoxOutline ? 'enable-sub' : 'disable-sub'
-                }`}
-                role="button"
-                tabIndex={0}
-                onClick={() => {
-                  setCollapseBoxOutline(!collapseBoxOutline);
-                  setCollapseBoxEditor(false);
-                  setCollapseBoxTimeline(false);
-                }}
-              >
-                <img src="/icons/chevron-right.svg" />
-                OUTLINE
-              </div>
-              <div className="tab-content">
-                The active editor cannot provide outline information.
-              </div>
-            </li>
-            <li
-              className={`explorer-${collapseBoxTimeline ? 'active-' : ''}item`}
-            >
-              <input
-                className="checkbox"
-                type="checkbox"
-                id="chck1"
-                checked={collapseBoxTimeline}
-                readOnly
-                disabled
-              />
-              <div
-                className={`card-title noselect ${
-                  collapseBoxTimeline ? 'enable-sub' : 'disable-sub'
-                }`}
-                role="button"
-                tabIndex={0}
-                onClick={() => {
-                  setCollapseBoxTimeline(!collapseBoxTimeline);
-                  setCollapseBoxEditor(false);
-                  setCollapseBoxOutline(false);
-                }}
-              >
-                <img src="/icons/chevron-right.svg" />
-                TIMELINE
-              </div>
-              <div className="tab-content">
-                The active editor cannot provide timeline information.
-              </div>
-            </li>
+                <input
+                  className="checkbox"
+                  type="checkbox"
+                  checked={`${m.key === activeContent ? 'checked' : ''}`}
+                />
+                <div
+                  className={`card-title noselect collapseBox${m.key} ${
+                    m.key === activeContent ? 'enable-sub' : 'disable-sub'
+                  }`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => {
+                    activeContent === m.key
+                      ? setactiveContent('')
+                      : setactiveContent(m.key);
+                  }}
+                >
+                  <img src="/icons/chevron-right.svg" />
+                  {m.title}
+                </div>
+                <div className="tab-content">{m.desc}</div>
+              </li>
+            ))}
           </ul>
         </AccordionContainer>
       </div>
@@ -154,6 +114,7 @@ export const AccordionContainer = styled.div`
       cursor: pointer;
       img {
         margin: 0 2px;
+        transition: 100ms;
       }
       &.enable-sub {
         img {
