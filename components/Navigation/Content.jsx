@@ -19,7 +19,7 @@ const Content = ({ active }) => {
 
 const Container = styled.div`
   display: block;
-  width: 300px;
+  width: 100%;
   height: 100%;
   background: #252526;
   .title {

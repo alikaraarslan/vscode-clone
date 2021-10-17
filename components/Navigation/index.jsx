@@ -14,6 +14,7 @@ const Navigation = () => {
 };
 
 const Container = styled.div`
+  overflow: hidden;
   display: flex;
 `;
 

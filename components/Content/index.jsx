@@ -47,6 +47,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 20px;
+  overflow: hidden;
+  min-width: 280px !important;
+
   img {
     width: 260px;
     margin-bottom: 15px;
@@ -57,6 +61,7 @@ const Container = styled.div`
       opacity: 0.8;
       margin-block-start: 1em;
       margin-block-end: 1em;
+      white-space: nowrap;
       b {
         color: rgba(255, 255, 255, 0.6);
         min-width: 140px;

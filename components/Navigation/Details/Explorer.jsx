@@ -47,10 +47,12 @@ const Explorer = () => {
                 className={`explorer-${
                   m.key === activeContent ? 'active-' : ''
                 }item`}
+                key={m.id}
               >
                 <input
                   className="checkbox"
                   type="checkbox"
+                  readOnly
                   checked={`${m.key === activeContent ? 'checked' : ''}`}
                 />
                 <div
@@ -112,6 +114,7 @@ export const AccordionContainer = styled.div`
       align-items: center;
       height: 22px;
       cursor: pointer;
+      white-space: nowrap;
       img {
         margin: 0 2px;
         transition: 100ms;
